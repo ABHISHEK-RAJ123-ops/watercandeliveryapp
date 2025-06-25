@@ -1,0 +1,41 @@
+.invoice-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.invoice-list {
+  list-style: none;
+  padding: 0;
+}
+
+.invoice-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.filter-buttons {
+  margin-bottom: 10px;
+}
+
+.filter-buttons button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+
+.filter-buttons button:hover {
+  background-color: #0056b3;
+}
