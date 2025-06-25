@@ -2,7 +2,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
-import morgan from 'morgan' // Optional logging
+import morgan from 'morgan'
 import connectDB from './config/db.js'
 
 // Route imports
@@ -22,11 +22,11 @@ const app = express()
 // Middleware
 app.use(cors())
 app.use(express.json())
-app.use(morgan('dev')) // Logs requests to console (optional but useful)
+app.use(morgan('dev'))
 
 // Root route
 app.get('/', (req, res) => {
-  res.send(' Water Can Delivery API is running')
+  res.send('🚰 Water Can Delivery API is running')
 })
 
 // API Routes
@@ -35,7 +35,7 @@ app.use('/api/bookings', bookingRoutes)
 app.use('/api/products', productRoutes)
 app.use('/api/invoices', invoiceRoutes)
 
-// 404 handler for unmatched routes
+// 404 handler
 app.use((req, res, next) => {
   const error = new Error(`Not Found - ${req.originalUrl}`)
   res.status(404)
